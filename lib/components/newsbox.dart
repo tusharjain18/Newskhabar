@@ -36,8 +36,8 @@ class NewsBox extends StatelessWidget {
                 CachedNetworkImage(
                   imageUrl: imageurl,
                   imageBuilder: (context, imageProvider) => Container(
-                    width: 60,
-                    height: 60,
+                    width: 70,
+                    height: 70,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: imageProvider, fit: BoxFit.cover),
@@ -56,7 +56,7 @@ class NewsBox extends StatelessWidget {
                     children: [
                       modifiedText(
                           color: AppColors.white, size: 16, text: title),
-                      SizedBox(height: 5),
+                      SizedBox(height: 10),
                       modifiedText(
                           color: AppColors.lightwhite, size: 12, text: time),
                     ],

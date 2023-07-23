@@ -36,7 +36,7 @@ class _SearchbarState extends State<Searchbar> {
                     child: TextField(
                   controller: Searchbar.searchcontroller,
                   decoration: InputDecoration(
-                      hintText: 'Search a Keyword or a Phrase',
+                      hintText: 'Search ',
                       hintStyle: GoogleFonts.lato(),
                       border: InputBorder.none),
                 ))

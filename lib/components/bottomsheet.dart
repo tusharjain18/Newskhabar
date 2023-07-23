@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 void showMyBottomSheet(
     BuildContext context, String title, String description, imageurl, url) {
   showBottomSheet(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -56,10 +56,10 @@ class MyBottomSheetLayout extends StatelessWidget {
         children: <Widget>[
           BottomSheetImage(imageurl: imageurl, title: title),
           Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(12),
               child: modifiedText(
-                  text: description, size: 16, color: Colors.white)),
-          Container(
+                  text: description, size: 18, color: Colors.white)),
+          /* Container(
             padding: EdgeInsets.all(10),
             child: RichText(
               text: TextSpan(
@@ -67,16 +67,22 @@ class MyBottomSheetLayout extends StatelessWidget {
                   TextSpan(
                       text: 'Read Full Article',
                       recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          _launchURL(url);
+                        ..onTap = () async {
+                          const url = "https:www.example.com";
+                          if (await canLaunch(url)) {
+                            await launch(url, forceWebView: true);
+                          } else {
+                            throw "Could not launch $url";
+                          }
                         },
                       style: GoogleFonts.lato(
-                        color: Colors.blue.shade400,
+                        fontSize: 16,
+                        color: Colors.white,
                       )),
                 ],
               ),
             ),
-          )
+          )*/
         ],
       ),
     );

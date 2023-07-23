@@ -12,7 +12,7 @@ class appbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      //  actions: [],
+      actions: [],
       backgroundColor: AppColors.black,
       elevation: 0,
       title: Container(
