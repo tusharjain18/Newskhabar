@@ -22,7 +22,7 @@ class appbar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               boldText(text: 'Newz', size: 20, color: AppColors.primary),
               modifiedText(
-                  text: 'Khabar', size: 20, color: AppColors.lightwhite)
+                  text: 'Feed', size: 20, color: AppColors.lightwhite)
             ],
           )),
       centerTitle: true,

@@ -4,7 +4,7 @@ import 'package:newkhabar/backend/functions.dart';
 import 'package:newkhabar/components/newsbox.dart';
 import 'package:newkhabar/drawer/business.dart';
 import 'package:newkhabar/drawer/entertainment.dart';
-import 'package:newkhabar/drawer/general.dart';
+
 import 'package:newkhabar/drawer/health.dart';
 import 'package:newkhabar/drawer/science.dart';
 import 'package:newkhabar/drawer/sports.dart';
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                       children: [
                         boldText(text: 'N', size: 30, color: AppColors.primary),
                         modifiedText(
-                            text: 'K', size: 30, color: AppColors.lightwhite)
+                            text: 'F', size: 30, color: AppColors.lightwhite)
                       ],
                     ),
                   ),
@@ -85,21 +85,6 @@ class _HomeState extends State<Home> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => Entertainment(),
-                      ),
-                    );
-                  },
-                ),
-                ListTile(
-                  leading: Icon(Icons.newspaper),
-                  title: Text(
-                    'General',
-                    style: GoogleFonts.roboto(fontSize: 18),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => General(),
                       ),
                     );
                   },
